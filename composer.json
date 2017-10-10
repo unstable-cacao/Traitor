@@ -1,0 +1,32 @@
+{
+    "name": "unstable-cacao/tap",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexey Puchkov",
+            "email": "alexey.pkv@gmail.com"
+        },
+        {
+            "name": "Marina Puchkov",
+            "email": "marinashers@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+	"require": {
+		"php": ">=7.1-stable"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^6.1",
+		"satooshi/php-coveralls": "^1.0"
+	},
+	"autoload": {
+		"psr-0": {
+			"TAP": "src"
+		}
+	},
+	"scripts": {
+		"test": "./vendor/bin/phpunit --dont-report-useless-tests",
+        "test-cover": "./vendor/phpunit/phpunit/phpunit --dont-report-useless-tests --coverage-html ./build/cover"
+	}
+}
