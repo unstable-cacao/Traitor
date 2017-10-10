@@ -5,7 +5,7 @@
         </whitelist>
     </filter>
     <testsuites>
-        <testsuite name="TAP">
+        <testsuite name="Traitor">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

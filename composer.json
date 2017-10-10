@@ -1,5 +1,5 @@
 {
-    "name": "unstable-cacao/tap",
+    "name": "unstable-cacao/traitor",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -22,7 +22,7 @@
 	},
 	"autoload": {
 		"psr-0": {
-			"TAP": "src"
+			"Traitor": "src"
 		}
 	},
 	"scripts": {
