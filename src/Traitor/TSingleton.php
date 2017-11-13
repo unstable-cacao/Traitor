@@ -5,5 +5,5 @@ namespace Traitor;
 trait TSingleton
 {
 	use TStaticClass;
-    use TSingletonLike;
+	use TSingletonLike;
 }
