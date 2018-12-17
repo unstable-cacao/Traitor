@@ -1,0 +1,12 @@
+Contents:
+1. Introduction and Installation
+2. References
+2.1. TConstsClass
+2.2. TEnum
+2.3. TMultiton
+2.4. TPrivateCallback
+2.5. TSingleton
+2.6. TSingletonLike
+2.7. TStaticClass
+3. General (Usage)
+4. Testing
