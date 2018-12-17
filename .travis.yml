@@ -9,4 +9,3 @@ before_script:
   
 script:
   - composer test-cover
-  - php vendor/bin/coveralls
