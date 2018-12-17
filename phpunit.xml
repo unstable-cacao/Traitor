@@ -1,4 +1,4 @@
-<phpunit bootstrap="tests/boot.php">
+<phpunit bootstrap="Tests/boot.php">
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./src/</directory>
@@ -6,7 +6,7 @@
     </filter>
     <testsuites>
         <testsuite name="Traitor">
-            <directory>tests</directory>
+            <directory>Tests</directory>
         </testsuite>
     </testsuites>
     <logging>
