@@ -1,7 +1,7 @@
 <phpunit bootstrap="Tests/boot.php">
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./src/</directory>
+            <directory suffix=".php">./Source/</directory>
         </whitelist>
     </filter>
     <testsuites>
