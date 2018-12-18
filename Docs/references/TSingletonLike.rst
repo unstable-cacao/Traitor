@@ -1,4 +1,10 @@
+===============
+TSingletonLike
+===============
+
 Introduction:
+==============
+
 TSingletonLike trait is used for a class that needs to have a single, static instance of itself, 
 without restricting the use of the construction, clone and deserialization functions.
 
@@ -6,11 +12,14 @@ without restricting the use of the construction, clone and deserialization funct
 
 
 References:
+=============
 
-protected initialize($instance)
+.. function:: protected initialize($instance)
+
 Initialize will be called when a new instance is created and can be used to initialize the state of the object.
 The newly created instance is passed as the first and only parameter to this function.
 
 
-instance()
+.. function:: instance()
+
 Returns the single instance of the class that is created only on the first call of this function.
