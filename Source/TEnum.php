@@ -11,7 +11,7 @@ trait TEnum
 	private static $values = false;
 	
 	
-	private static function loadConsts()
+	private static function loadConsts(): void
 	{
 		if (self::$values) return;
 		

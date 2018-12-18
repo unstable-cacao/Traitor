@@ -11,7 +11,7 @@ trait TConstsClass
 	private static $constsCollection = false;
 	
 	
-	private static function loadConsts()
+	private static function loadConsts(): void
 	{
 		if (!self::$constsCollection)
 			self::$constsCollection = (new \ReflectionClass(__CLASS__))->getConstants();
@@ -42,12 +42,16 @@ trait TConstsClass
 		return count(self::$constsCollection);
 	}
 	
-	public static function isConstExists($name): bool 
+	public static function isConstExists(string $name): bool 
 	{
 		self::loadConsts();
 		return isset(self::$constsCollection[$name]);
 	}
 	
+	/**
+	 * @param mixed $value
+	 * @return bool
+	 */
 	public static function isConstValueExists($value): bool 
 	{
 		self::loadConsts();

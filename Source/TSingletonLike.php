@@ -16,6 +16,9 @@ trait TSingletonLike
 	protected static function initialize($instance) {}
 	
 	
+	/**
+	 * @return static
+	 */
 	public static function instance()
 	{
 		if (is_null(self::$instance))
