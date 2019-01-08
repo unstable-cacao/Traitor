@@ -2,7 +2,7 @@
 TMultiton
 =============
 
-Introduction:
+Introduction
 ==============
 
 The TMultiton trait is representing a multiton class that ensures a single instance per key.
@@ -12,7 +12,7 @@ A possible usage is for caching config files, every config.ini file having its o
     TMultiton uses the TStaticClass trait.
 
 
-References:
+References
 =============
 
 .. function:: protected initialize(TMultiton $instance, $key)

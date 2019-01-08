@@ -2,7 +2,7 @@
 TSingletonLike
 ===============
 
-Introduction:
+Introduction
 ==============
 
 TSingletonLike trait is used for a class that needs to have a single, static instance of itself, 
@@ -11,7 +11,7 @@ without restricting the use of the construction, clone and deserialization funct
 // TODO: Add link to where Singleton usage compared to SingletonLike
 
 
-References:
+References
 =============
 
 .. function:: protected initialize($instance)

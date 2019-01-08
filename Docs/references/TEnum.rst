@@ -2,7 +2,7 @@
 TEnum
 =============
 
-Introduction:
+Introduction
 =============
 
 This trait is for classes that store a collection of constants that are interchangeable or used as a bitmask (when value is integer),
@@ -18,7 +18,7 @@ e.g. class containing the possible HTTP methods.
     TEnum uses TStaticClass.
 
 
-References:
+References
 =============
 
 .. function:: getAll(): array

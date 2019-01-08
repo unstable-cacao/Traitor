@@ -2,7 +2,7 @@
 TSingleton
 =============
 
-Introduction:
+Introduction
 ==============
 
 The TSingleton trait represents a singleton class. It uses the TStaticClass trait to restrict access to the construction, 
