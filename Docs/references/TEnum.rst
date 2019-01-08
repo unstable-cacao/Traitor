@@ -1,29 +1,67 @@
-=============
+*************
 TEnum
-=============
+*************
 
-Introduction
-=============
+.. code-block:: php
 
-This trait is for classes that store a collection of constants that are interchangeable or used as a bitmask (when value is integer),
-e.g. class containing the possible HTTP methods.
+    trait TEnum 
+    {
+        use TStaticClass;
+    }
+
+The TEnum should be used on a class whose sole purpose is to define a set of interchangeable values or flags.
+For example a list of HTTP response codes:
+
+.. code-block:: php
+
+    class HTTPCodes 
+    {
+        use TEnum;
+        
+        
+        public const OK         = 200;
+        public const NOT_FOUND  = 404;
+    }
+
+It's a good practice to not provide any additional functionality to this class beyond consts definitions.
+
 
 .. note::
-    Constants in a TEnum class can be of value string or int only.
+    Const values in a TEnum class can be of value string or int only.
 
 .. note::
-    TEnum methods include private constants.
+    TEnum methods will return all constants in the class, regardless of their access level, 
+    and ignore any other non-const definitions.
 
-.. note::
-    TEnum uses TStaticClass.
+    .. code-block:: php
+
+        class HTTPMethod 
+        {
+            use TEnum;
+            
+            
+            private const GET   = 'get';
+            public const POST   = 'post';
+            
+            public static $put = 'put';
+        }
+
+    ``HTTPMethod::getAll()`` will return
+
+    .. code-block:: php
+
+        ["get", "post"]
 
 
-References
-=============
 
-.. function:: getAll(): array
+getAll
+-----------------
 
-Return an array of all the values of the consts in the class.
+.. function:: public static getAll(): array
+
+    Return an array of all the values of the consts in the class.
+
+*Example:*
 
 .. code-block:: php
 
@@ -32,8 +70,8 @@ Return an array of all the values of the consts in the class.
         use TEnum;
         
         
-        const GET   = 'get';
-        const POST  = 'post';
+        public const GET   = 'get';
+        public const POST  = 'post';
     }
 
 ``HTTPMethod::getAll()`` will return
@@ -44,9 +82,14 @@ Return an array of all the values of the consts in the class.
 
 
 
-.. function:: implodeAll(string $glue = ','): string
+implodeAll
+-----------------
 
-Return a string of all the values of the consts in the class glued with the string in the parameter $glue.
+.. function:: public static implodeAll(string $glue = ','): string
+
+    Return a string of all the values of the consts in the class glued with the string in the parameter **$glue**.
+
+*Example:*
 
 .. code-block:: php
 
@@ -55,8 +98,8 @@ Return a string of all the values of the consts in the class glued with the stri
         use TEnum;
         
         
-        const GET   = 'get';
-        const POST  = 'post';
+        public const GET   = 'get';
+        public const POST  = 'post';
     }
 
 ``HTTPMethod::implodeAll()`` will return
@@ -65,11 +108,22 @@ Return a string of all the values of the consts in the class glued with the stri
 
     "get,post"
 
+``HTTPMethod::implodeAll('|')`` will return
+
+.. code-block:: php
+
+    "get|post"
 
 
-.. function:: isExists($value): bool
 
-Return true if a constant with the value $value exists in the class, and false otherwise.
+isExists
+-----------------
+
+.. function:: public static isExists($value): bool
+
+    Return true if a constant with the value **$value** exists in the class, and false otherwise.
+
+*Example:*
 
 .. code-block:: php
 
@@ -78,9 +132,15 @@ Return true if a constant with the value $value exists in the class, and false o
         use TEnum;
         
         
-        const GET   = 'get';
-        const POST  = 'post';
+        public const GET   = 'get';
+        public const POST  = 'post';
     }
+
+``HTTPMethod::isExists('get')`` will return
+
+.. code-block:: php
+
+    true
 
 ``HTTPMethod::isExists('put')`` will return
 
@@ -90,9 +150,14 @@ Return true if a constant with the value $value exists in the class, and false o
 
 
 
-.. function:: getCount(): int
+getCount
+-----------------
 
-Return the count of the consts in the class.
+.. function:: public static getCount(): int
+
+    Return the count of the consts in the class.
+
+*Example:*
 
 .. code-block:: php
 
@@ -101,8 +166,8 @@ Return the count of the consts in the class.
         use TEnum;
         
         
-        const GET   = 'get';
-        const POST  = 'post';
+        public const GET   = 'get';
+        public const POST  = 'post';
     }
 
 ``HTTPMethod::getCount()`` will return
