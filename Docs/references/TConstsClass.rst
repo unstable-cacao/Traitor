@@ -19,7 +19,7 @@ It's a good practice to not provide any additional functionality to this class b
 
 .. note::
     TConstsClass methods will return all constants in the class, regardless of their access level, 
-    and ignore any other data members.
+    and ignore any other non-const definitions.
 
     .. code-block:: php
 
