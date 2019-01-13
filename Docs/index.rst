@@ -9,4 +9,3 @@ Welcome to Traitor Documentation!
    intro/index
    references/index
    general/index
-   testing/index
