@@ -1,4 +1,5 @@
-# Traitor
+# Traitor 
+[![Build Status](https://travis-ci.org/unstable-cacao/Traitor.svg?branch=master)](https://travis-ci.org/unstable-cacao/Traitor)
 
 ### Installation
 
