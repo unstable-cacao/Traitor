@@ -1,3 +1,5 @@
+.. _main_tenum_page:
+
 *************
 TEnum
 *************
@@ -27,7 +29,7 @@ It's a good practice to not provide any additional functionality to this class b
 
 
 .. note::
-    Const values in a TEnum class can be of value string or int only.
+    Const values in a TEnum class can be of string or int types only.
 
 .. note::
     TEnum methods will return all constants in the class, regardless of their access level, 

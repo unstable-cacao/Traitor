@@ -15,7 +15,7 @@ It's a good practice to not provide any additional functionality to this class b
 
 .. note::
     TConstsClass methods should not be used for input validation unless followed by additional validation rules.
-    If a set of interchangeable values or binary flags is needed, TEnum should be used instead.
+    If a set of interchangeable values or binary flags is needed, :ref:`main_tenum_page` should be used instead.
 
 .. note::
     TConstsClass methods will return all constants in the class, regardless of their access level, 
@@ -90,10 +90,10 @@ getConstNames
         use TConstsClass;
         
         
-        const GET_USERS     = '/users';
-        const GET_CLIENTS   = '/clients';
+        public const GET_USERS     = '/users';
+        public const GET_CLIENTS   = '/clients';
         
-        const DEPRECATED_ENDPOINTS = [
+        public const DEPRECATED_ENDPOINTS = [
             self::GET_CLIENTS
         ];
     }
@@ -122,10 +122,10 @@ getConstValues
         use TConstsClass;
         
         
-        const GET_USERS     = '/users';
-        const GET_CLIENTS   = '/clients';
+        public const GET_USERS     = '/users';
+        public const GET_CLIENTS   = '/clients';
         
-        const DEPRECATED_ENDPOINTS = [
+        public const DEPRECATED_ENDPOINTS = [
             self::GET_CLIENTS
         ];
     }
@@ -154,10 +154,10 @@ getConstsCount
         use TConstsClass;
         
         
-        const GET_USERS     = '/users';
-        const GET_CLIENTS   = '/clients';
+        public const GET_USERS     = '/users';
+        public const GET_CLIENTS   = '/clients';
         
-        const DEPRECATED_ENDPOINTS = [
+        public const DEPRECATED_ENDPOINTS = [
             self::GET_CLIENTS
         ];
     }
@@ -186,10 +186,10 @@ isConstExists
         use TConstsClass;
         
         
-        const GET_USERS     = '/users';
-        const GET_CLIENTS   = '/clients';
+        public const GET_USERS     = '/users';
+        public const GET_CLIENTS   = '/clients';
         
-        const DEPRECATED_ENDPOINTS = [
+        public const DEPRECATED_ENDPOINTS = [
             self::GET_CLIENTS
         ];
     }
@@ -223,7 +223,7 @@ isConstValueExists
         use TConstsClass;
         
         
-        const TIMEOUT = 5;
+        public const TIMEOUT = 5;
     }
 
 ``APIEndPoints::isConstValueExists(5)`` will return
