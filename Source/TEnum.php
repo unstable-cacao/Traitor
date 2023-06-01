@@ -8,7 +8,7 @@ trait TEnum
 	
 	
 	/** @var array */
-	private static $values = false;
+	private static $values = [];
 	
 	
 	private static function loadConsts(): void
